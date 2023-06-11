@@ -1,0 +1,14 @@
+<RCC>
+  <qresource>
+    <file>icons/help-help.svg</file>
+    <file>icons/edit-clear.svg</file>
+    <file>icons/open_folder.svg</file>
+    <file>icons/script.png</file>
+    <file>icons/edit-copy.svg</file>
+    <file>icons/about.png</file>
+    <file>icons/zoom_in.svg</file>
+    <file>icons/zoom_out.svg</file>
+    <file>icons/aboutQt.png</file>
+    <file>icons/quit.png</file>
+  </qresource>
+</RCC>

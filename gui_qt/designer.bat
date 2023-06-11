@@ -1,0 +1,1 @@
+start /b pyside6-designer

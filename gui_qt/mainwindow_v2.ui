@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>928</width>
+    <height>684</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="3" column="0">
+     <widget class="QTextEdit" name="output_box">
+      <property name="font">
+       <font>
+        <family>Verdana</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 127);
+color: rgb(255, 255, 127);</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTabWidget" name="tab_widget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="currentIndex">
+       <number>6</number>
+      </property>
+      <widget class="QWidget" name="tab_tree_info">
+       <attribute name="title">
+        <string>tree_info</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="3">
+           <widget class="QPushButton" name="tree_info_path_button">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/open_folder.svg</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Depth:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QPushButton" name="tree_info_help_button">
+            <property name="text">
+             <string>Help</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/help-help.svg</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QSpinBox" name="tree_info_depth">
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLineEdit" name="tree_info_path_text">
+            <property name="text">
+             <string>.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="baseSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Path:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QPushButton" name="tree_info_go_button">
+            <property name="text">
+             <string>Go</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/script.png</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_clp">
+       <attribute name="title">
+        <string>clp</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,0,0,0,1,2,0">
+        <item row="3" column="2">
+         <widget class="QRadioButton" name="clp_comas_dots_radio">
+          <property name="text">
+           <string>comas-dots</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="5">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QRadioButton" name="clp_replace_regex_radio">
+            <property name="text">
+             <string>replace-regex</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="clp_replace_regex_original">
+            <property name="placeholderText">
+             <string>Original text</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="clp_replace_regex_new">
+            <property name="placeholderText">
+             <string>Replacement text</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="5">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QRadioButton" name="clp_replace_radio">
+            <property name="text">
+             <string>replace</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="clp_replace_original">
+            <property name="placeholderText">
+             <string>Original text</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="clp_replace_new">
+            <property name="placeholderText">
+             <string>Replacement text</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <widget class="QRadioButton" name="clp_date_radio">
+          <property name="text">
+           <string>date</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QRadioButton" name="clp_bullets_radio">
+            <property name="text">
+             <string>bullets</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="clp_bullets_text">
+            <property name="text">
+             <string>- </string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="3">
+         <widget class="QRadioButton" name="clp_list_radio">
+          <property name="text">
+           <string>list</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QRadioButton" name="clp_md_toc_radio">
+          <property name="text">
+           <string>md-toc</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QRadioButton" name="clp_capitalize_radio">
+          <property name="text">
+           <string>capitalize</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QRadioButton" name="clp_extract_radio">
+            <property name="text">
+             <string>extract</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="clp_extract_text">
+            <property name="placeholderText">
+             <string>regex pattern</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="1">
+         <widget class="QRadioButton" name="clp_to_regex_radio">
+          <property name="text">
+           <string>to-regex</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="6">
+         <widget class="QPushButton" name="clp_go_button">
+          <property name="text">
+           <string>Go</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icons/script.png</normalon>
+           </iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="6">
+         <widget class="QPushButton" name="clp_help_button">
+          <property name="text">
+           <string>Help</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icons/help-help.svg</normalon>
+           </iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_backup">
+       <attribute name="title">
+        <string>backup_to_zip</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="3">
+         <widget class="QPushButton" name="backup_help_button">
+          <property name="text">
+           <string>Help</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icons/help-help.svg</normalon>
+           </iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="backup_go_button">
+          <property name="text">
+           <string>Go</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icons/script.png</normalon>
+           </iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QCheckBox" name="backup_compress_check">
+          <property name="text">
+           <string>Compress</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Destination path</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="backup_destination">
+            <property name="text">
+             <string>C:\Cloud\Backups</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="backup_destination_button">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/open_folder.svg</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Path to backup</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="backup_path"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="backup_path_button">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/open_folder.svg</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_alarm">
+       <attribute name="title">
+        <string>alarm</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_19" stretch="1,0">
+          <item>
+           <widget class="QLineEdit" name="alarm_message">
+            <property name="placeholderText">
+             <string>Message to show</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="0" column="1">
+             <widget class="QPushButton" name="alarm_help_button">
+              <property name="text">
+               <string>Help</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/help-help.svg</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <item>
+               <widget class="QRadioButton" name="alarm_at_radio">
+                <property name="text">
+                 <string>At fixed time</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="alarm_at_text"/>
+              </item>
+             </layout>
+            </item>
+            <item row="2" column="1">
+             <widget class="QPushButton" name="alarm_go_button">
+              <property name="text">
+               <string>Go</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/script.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_9">
+              <item>
+               <widget class="QRadioButton" name="alarm_wait_radio">
+                <property name="text">
+                 <string>Wait</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="alarm_wait_text"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_grep">
+       <attribute name="title">
+        <string>grep</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Files</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="grep_files">
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="grep_folder_button">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/open_folder.svg</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Pattern</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="grep_pattern"/>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="grep_go_button">
+          <property name="text">
+           <string>Go</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icons/script.png</normalon>
+           </iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="grep_help_button">
+          <property name="text">
+           <string>Help</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icons/help-help.svg</normalon>
+           </iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_mcb">
+       <attribute name="title">
+        <string>mcb</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="2">
+         <widget class="QPushButton" name="mcb_help_button">
+          <property name="text">
+           <string>Help</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icons/help-help.svg</normalon>
+           </iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="mcb_go_button">
+          <property name="text">
+           <string>Go</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icons/script.png</normalon>
+           </iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_15">
+          <item>
+           <widget class="QRadioButton" name="mcb_del_radio">
+            <property name="text">
+             <string>del</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="mcb_delete_kw">
+            <property name="placeholderText">
+             <string>enter keyword</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_16">
+          <item>
+           <widget class="QRadioButton" name="mcb_save_radio">
+            <property name="text">
+             <string>save</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="mcb_save_kw">
+            <property name="placeholderText">
+             <string>enter keyword</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <item>
+           <widget class="QRadioButton" name="mcb_load_radio">
+            <property name="text">
+             <string>load</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="mcb_load_kw">
+            <property name="placeholderText">
+             <string>enter keyword</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="1">
+         <widget class="QRadioButton" name="mcb_list_radio">
+          <property name="text">
+           <string>list</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>pdf_pages</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="4" column="4">
+         <widget class="QComboBox" name="pdf_logging">
+          <property name="placeholderText">
+           <string>Logging</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3" rowspan="3" colspan="3">
+         <layout class="QHBoxLayout" name="horizontalLayout_18">
+          <item>
+           <widget class="QLineEdit" name="pdf_outpu_file">
+            <property name="placeholderText">
+             <string>Output file</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pdf_outpu_file_button">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/open_folder.svg</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="7">
+         <widget class="QPushButton" name="pdf_help_button">
+          <property name="text">
+           <string>Help</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icons/help-help.svg</normalon>
+           </iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" rowspan="3" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_14">
+          <item>
+           <widget class="QLineEdit" name="pdf_input_file">
+            <property name="placeholderText">
+             <string>PDF file</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pdf_input_file_button">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/open_folder.svg</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="pdf_input_pages">
+            <property name="placeholderText">
+             <string>Pages</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_20">
+          <item>
+           <widget class="QCheckBox" name="pdf_encrypt_check">
+            <property name="text">
+             <string>Encrypt</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="pdf_decrypt_check">
+            <property name="text">
+             <string>Dencrypt</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="pdf_password">
+            <property name="placeholderText">
+             <string>Password</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_21">
+          <item>
+           <widget class="QLineEdit" name="pdf_additional_file">
+            <property name="placeholderText">
+             <string>Additional PDF</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pdf_additional_file_button">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/open_folder.svg</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="pdf_additional_pages">
+            <property name="placeholderText">
+             <string>Pages</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2" rowspan="3">
+         <layout class="QHBoxLayout" name="horizontalLayout_17">
+          <item>
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>Rotate</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="pdf_roation_degrees">
+            <property name="minimum">
+             <number>-360</number>
+            </property>
+            <property name="maximum">
+             <number>360</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="pdf_roation_pages">
+            <property name="placeholderText">
+             <string>Pages</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="7">
+         <widget class="QPushButton" name="pdf_go_button">
+          <property name="text">
+           <string>Go</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icons/script.png</normalon>
+           </iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>928</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuScript">
+    <property name="statusTip">
+     <string>Choose the script you want to run</string>
+    </property>
+    <property name="title">
+     <string>Script</string>
+    </property>
+    <addaction name="action_script_tree_info"/>
+    <addaction name="action_script_clp"/>
+    <addaction name="action_script_backup"/>
+    <addaction name="action_script_alarm"/>
+    <addaction name="action_script_grep"/>
+    <addaction name="action_script_mcb"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="action_about"/>
+    <addaction name="action_aboutQt"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="statusTip">
+     <string>File options, like Quit the program</string>
+    </property>
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="action_quit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="statusTip">
+     <string>Zoom in and out</string>
+    </property>
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="action_zoom_in"/>
+    <addaction name="action_zoom_out"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="action_copy"/>
+    <addaction name="action_clear"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuScript"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_quit"/>
+   <addaction name="separator"/>
+   <addaction name="action_copy"/>
+   <addaction name="action_clear"/>
+   <addaction name="separator"/>
+   <addaction name="action_zoom_in"/>
+   <addaction name="action_zoom_out"/>
+   <addaction name="separator"/>
+   <addaction name="action_about"/>
+   <addaction name="action_aboutQt"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="action_quit">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/quit.png</normaloff>:/icons/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="toolTip">
+    <string>Quit</string>
+   </property>
+   <property name="statusTip">
+    <string>Quit the program</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action_script_tree_info">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/script.png</normaloff>:/icons/script.png</iconset>
+   </property>
+   <property name="text">
+    <string>tree_info</string>
+   </property>
+   <property name="toolTip">
+    <string>tree_info</string>
+   </property>
+   <property name="statusTip">
+    <string>Show information about size, files and subfolders of selected folder</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/about.png</normaloff>:/icons/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="toolTip">
+    <string>About</string>
+   </property>
+   <property name="statusTip">
+    <string>Information about author and program</string>
+   </property>
+  </action>
+  <action name="action_aboutQt">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/aboutQt.png</normaloff>:/icons/aboutQt.png</iconset>
+   </property>
+   <property name="text">
+    <string>About Qt</string>
+   </property>
+   <property name="toolTip">
+    <string>About Qt</string>
+   </property>
+   <property name="statusTip">
+    <string>Information about Qt version used</string>
+   </property>
+  </action>
+  <action name="action_script_clp">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/script.png</normaloff>:/icons/script.png</iconset>
+   </property>
+   <property name="text">
+    <string>clp</string>
+   </property>
+   <property name="toolTip">
+    <string>clp</string>
+   </property>
+   <property name="statusTip">
+    <string>Transform clipboard</string>
+   </property>
+  </action>
+  <action name="action_zoom_in">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/zoom_in.svg</normaloff>:/icons/zoom_in.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom in</string>
+   </property>
+   <property name="statusTip">
+    <string>Make the text larger</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl++</string>
+   </property>
+  </action>
+  <action name="action_zoom_out">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/zoom_out.svg</normaloff>:/icons/zoom_out.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom out</string>
+   </property>
+   <property name="statusTip">
+    <string>Make the text smaller</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+  </action>
+  <action name="action_clear">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/edit-clear.svg</normaloff>:/icons/edit-clear.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Clear</string>
+   </property>
+   <property name="statusTip">
+    <string>Clear all text from the output box</string>
+   </property>
+  </action>
+  <action name="action_copy">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/edit-copy.svg</normaloff>:/icons/edit-copy.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+   <property name="statusTip">
+    <string>Copy selected text to clipboard</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="action_script_backup">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/script.png</normaloff>:/icons/script.png</iconset>
+   </property>
+   <property name="text">
+    <string>backup_to_zip</string>
+   </property>
+   <property name="statusTip">
+    <string>Backup a folder to a zip file, compressed or uncompressed.</string>
+   </property>
+  </action>
+  <action name="action_script_alarm">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/script.png</normaloff>:/icons/script.png</iconset>
+   </property>
+   <property name="text">
+    <string>alarm</string>
+   </property>
+   <property name="statusTip">
+    <string>Program an alarm with a message and sound</string>
+   </property>
+  </action>
+  <action name="action_script_grep">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/script.png</normaloff>:/icons/script.png</iconset>
+   </property>
+   <property name="text">
+    <string>grep</string>
+   </property>
+   <property name="statusTip">
+    <string>Find a pattern within a group of files</string>
+   </property>
+  </action>
+  <action name="action_script_mcb">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/script.png</normaloff>:/icons/script.png</iconset>
+   </property>
+   <property name="text">
+    <string>mcb</string>
+   </property>
+   <property name="statusTip">
+    <string>Multiclipboard: puts text in clipboard, based on short key value</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
