@@ -10,7 +10,7 @@ class Grep:
 
 
     def script_grep(self):
-        script = 'grep.py'
+        script = 'grep'
 
         files = self.parent.grep_files.text()
         pattern = self.parent.grep_pattern.text()

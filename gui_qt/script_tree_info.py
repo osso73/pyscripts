@@ -10,7 +10,7 @@ class TreeInfo:
 
 
     def script_tree_info(self):
-        script = 'tree_info.py'
+        script = 'tree_info'
 
         # parameters
         start_path = self.parent.tree_info_path_text.text()

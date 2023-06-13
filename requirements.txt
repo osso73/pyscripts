@@ -3,3 +3,4 @@ requests
 pytest
 coverage
 PySide6==6.5.0
+cx_freeze

@@ -11,7 +11,7 @@ class Backup:
 
 
     def script_backup(self):
-        script = 'backup_to_zip.py'
+        script = 'backup_to_zip'
         path = self.parent.backup_path.text()
         destination = self.parent.backup_destination.text()
         args = ["-d", destination, path]

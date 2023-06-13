@@ -12,7 +12,7 @@ class Mcb:
 
 
     def script_mcb(self):
-        script = 'mcb.py'
+        script = 'mcb'
 
         if self.parent.mcb_load_radio.isChecked():
             keyword = self.parent.mcb_load_kw.text()

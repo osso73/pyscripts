@@ -9,7 +9,7 @@ class Clp:
 
 
     def script_clp(self):
-        script = 'clp.py'
+        script = 'clp'
         
         if self.parent.clp_date_radio.isChecked():
             args = ["date"]

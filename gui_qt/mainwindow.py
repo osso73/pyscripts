@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QMainWindow, QMessageBox, QFileDialog
 from PySide6.QtCore import QProcess
 from PySide6.QtCore import QThread
+
 from script_tree_info import TreeInfo
 from script_clp import Clp
 from script_backup import Backup
@@ -55,16 +56,17 @@ Author: osso
         
     
     def run_script(self, script, args):
-        args = [f'scripts/{script}', *args]
+        # args = [f'{script}', *args]
+        # scipt += ".py"
 
         self.process = QProcess(self)
         self.process.setProcessChannelMode(QProcess.MergedChannels)
-        self.process.setProgram('.venv/Scripts/python.exe')
+        self.process.setProgram(script)
         self.process.setArguments(args)
         self.process.readyReadStandardOutput.connect(self.handle_stdout)
         self.process.finished.connect(self.process_finished)
         cmd = " ".join(args)
-        msg = f'Executing process: "{cmd}" ...'
+        msg = f'Executing process: "{script} {cmd}" ...'
         self.output_box.append(msg)
         self.process.start()
 
@@ -80,7 +82,7 @@ Author: osso
 
     def show_help(self, script):
         self.output_box.clear()
-        self.run_script(script+'.py', ['--help'])
+        self.run_script(script, ['--help'])
     
 
     def open_path(self, line_edit):

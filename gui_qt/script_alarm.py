@@ -9,7 +9,7 @@ class Alarm:
 
 
     def script_alarm(self):
-        script = 'alarm.py'
+        script = 'alarm'
 
         msg = self.parent.alarm_message.text()
 
