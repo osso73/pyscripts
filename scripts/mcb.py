@@ -12,7 +12,7 @@ Usage: mcb save <keyword> - Saves clipboard to keyword.
 @author: opujo
 """
 # folder to save the config. Change as needed
-SAVE_CONFIG = r'C:\Cloud\Data\Programacion\Python\scripts'
+SAVE_CONFIG = r'C:\Cloud\Portable\Scripts'
 
 import sys, pyperclip, shelve
 
@@ -28,7 +28,7 @@ Usage: mcb save <keyword> - Saves clipboard to keyword.
        mcb list - Loads all keywords to clipboard.
        ''')
     input('Press <ENTER> to continue . . .')
-    exit(1)
+    sys.exit(1)
     
 elif args[0].lower() == 'save':
     text[args[1]] = pyperclip.paste()

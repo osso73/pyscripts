@@ -3,8 +3,9 @@ from cx_Freeze import setup, Executable
 # Dependencies are automatically detected, but it might need
 # fine tuning.
 build_options = {
-    'packages': [], 
-    'excludes': []
+    'packages': ['dbm'], 
+    'excludes': ['unittest', 'pydoc'],
+    'zip_include_packages': ['encodings'],
     }
 
 base = 'console'

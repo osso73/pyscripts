@@ -4,7 +4,8 @@ from cx_Freeze import setup, Executable
 # fine tuning.
 build_options = {
     'packages': [], 
-    'excludes': []
+    "excludes": ["tkinter", "unittest"],
+    "zip_include_packages": ["encodings", "PySide6"],
     }
 
 base = 'WIN32GUI'
