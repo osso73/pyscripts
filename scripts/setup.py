@@ -4,7 +4,7 @@ from cx_Freeze import setup, Executable
 # fine tuning.
 build_options = {
     'packages': ['dbm'], 
-    'excludes': ['unittest', 'pydoc'],
+    'excludes': ['unittest', 'pydoc', 'PySide6', 'tkinter', 'PIL'],
     'zip_include_packages': ['encodings'],
     }
 

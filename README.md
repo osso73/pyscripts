@@ -40,7 +40,7 @@ python gui_qt/main.py
 
 ## Compiling
 
-I'm using `cx_freeze` to compile the scripts into executable files, that I can then place in my windows PC on a folder in the path, and run them from the command line. I need to compile the code from the folder where the scripts are located. The file `setup.py` contains the configuration, and the compilation of files can be launched as follows:
+I'm using `cx_freeze` to compile the scripts into executable files, that I can then place in my windows PC on a folder in the path, and run them from the command line. `cx_freeze` is included in the `requirements.txt` file.I need to compile the code from the folder where the scripts are located. The file `setup.py` contains the configuration, and the compilation of files can be launched as follows:
 
 ```
 cd scripts
@@ -49,7 +49,13 @@ python setup.py build
 
 This will create a folder build, with the executable for all scripts. You can move this folder to wherever you want on your PC, and run the scripts without need of python.
 
-I will need to create a separate executable for the GUI, since I cannot make cx_freeze work from the root folder.
+Following the same approach, the gui can be compiled by running the following command:
+
+```
+cd gui_qt
+python setup.py build
+```
+
 
 
 ## Testing

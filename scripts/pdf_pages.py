@@ -87,45 +87,45 @@ logging.debug(f'arguments: {args}')
 
 # open file, and decrypt if needed
 pdfFileObj = open(args.PDFfile, 'rb')
-pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
+pdfReader = PyPDF2.PdfReader(pdfFileObj)
 if args.decrypt:
     pdfReader.decrypt(args.decrypt)
 
 # get the list of pages to copy, and to rotate
-list_pages = parse_pages(args.pages, pdfReader.numPages)
+list_pages = parse_pages(args.pages, len(pdfReader.pages))
 
 rotate = dict()
 if args.rotate:
     for i, each in enumerate(args.rotate):
         rotate[i] = ( int(each[0])//90*90,  # to ensure it's multiple of 90
-              parse_pages(each[1], pdfReader.numPages) )
+              parse_pages(each[1], len(pdfReader.pages)) )
 
 logging.info(f'Pages to include: {list_pages}')
 for each in rotate.values():
     logging.info(f'Rotate {each[0]}º pages: {each[1]}')
 
 # add pages to the output from the first file
-pdfWriter = PyPDF2.PdfFileWriter()
+pdfWriter = PyPDF2.PdfWriter()
 for pageNum in list_pages:
-    pageObj = pdfReader.getPage(pageNum)
+    pageObj = pdfReader.pages[pageNum]
     
     # rotate the pages as needed (allowing different rotations)
     for each in rotate.values():
         if pageNum in each[1]:
             pageObj.rotateClockwise(each[0])
     
-    pdfWriter.addPage(pageObj)
+    pdfWriter.add_page(pageObj)
 
 # add pages from additional files (merge)
 if args.merge:
     for merged_file in args.merge:
         filename, pags = merged_file
         newFile = open(filename, 'rb')
-        pdfMerger = PyPDF2.PdfFileReader(newFile)
-        list_pages = parse_pages(pags, pdfMerger.numPages)
+        pdfMerger = PyPDF2.PdfReader(newFile)
+        list_pages = parse_pages(pags, len(pdfMerger.pages))
         for pageNum in list_pages:
-            pageObj = pdfMerger.getPage(pageNum)
-            pdfWriter.addPage(pageObj)
+            pageObj = pdfMerger.pages[pageNum]
+            pdfWriter.add_page(pageObj)
         #newFile.close()
 
 # check if it needs encryption

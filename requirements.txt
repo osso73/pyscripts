@@ -1,6 +1,6 @@
-pyperclip
-requests
-pytest
-coverage
-PySide6==6.5.0
-cx_freeze
+pyperclip==1.8.2
+requests==2.31.0
+pytest==7.3.2
+coverage==7.2.7
+cx-Freeze==6.15.1        
+PyPDF2==3.0.1
