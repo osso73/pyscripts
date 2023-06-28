@@ -136,6 +136,7 @@ def show_tree(tree, name='top', level=0, max_level=None):
     for subdir in tree:
         if subdir == '__data__':
             prefix = '│  '*level + '\u2514\u2500' if level else ''
+            # prefix = '   '*level + '-> ' if level else ''
             d, f, s = tree["__data__"]
             d_name = 'directory' if d==1 else 'directories'
             f_name = 'file' if f==1 else 'files'

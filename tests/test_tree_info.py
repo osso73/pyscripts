@@ -14,7 +14,7 @@ from scripts import tree_info
 
 
 @pytest.mark.parametrize("arg, depth", [
-    ('c:\\', '-d 3'), ('.', None), ('../../python/', '-d 5'),
+    ('c:\\', '-d 3'), ('.', None), ('C:\\windows\\temp', '-d 5'),
     (None, '-d 1')
     ])
 def test_command_line_ok(arg, depth):
