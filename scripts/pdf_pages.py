@@ -112,7 +112,7 @@ for pageNum in list_pages:
     # rotate the pages as needed (allowing different rotations)
     for each in rotate.values():
         if pageNum in each[1]:
-            pageObj.rotateClockwise(each[0])
+            pageObj.rotate(each[0])
     
     pdfWriter.add_page(pageObj)
 
