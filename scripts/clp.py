@@ -226,7 +226,7 @@ def date_format(original):
     change date format from US (month/day) to EU (day/month)
     or viceversa. Just exchange date and month.
     """
-    dateRegex = re.compile(r"(\d\d?)(D)(\d\d?)(D)(\d{2,4})")
+    dateRegex = re.compile(r"(\d\d?)(\D)(\d\d?)(\D)(\d{2,4})")
     final = dateRegex.sub(r"\3\2\1\4\5", original)
 
     return final

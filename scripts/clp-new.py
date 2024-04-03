@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
+New version of clp -- refactoring code, with several modifications: 
+    - adding typings
+    - using protocol class
+    - mapping actions to functions
+
 clip.py - Manipulates the clipboard
 
 Created on Fri Mar  6 12:01:59 2020
@@ -224,7 +229,7 @@ def date_format(original: str) -> str:
     change date format from US (month/day) to EU (day/month)
     or viceversa. Just exchange date and month.
     """
-    dateRegex = re.compile(r"(\d\d?)(D)(\d\d?)(D)(\d{2,4})")
+    dateRegex = re.compile(r"(\d\d?)(\D)(\d\d?)(\D)(\d{2,4})")
     final = dateRegex.sub(r"\3\2\1\4\5", original)
 
     return final
