@@ -12,7 +12,7 @@ Options:
     -l, --limit <n>     limit to first n URLs [default: 10]. Use 0 for unlimited
     -p, --path <path>   download to path [default: ~/Downloads]
 """
- 
+
 import os
 import pyperclip
 import requests
@@ -32,8 +32,10 @@ def parse_arguments(raw_arguments: dict) -> dict:
     :return: dictionary with updated values after parsing
     """
     arguments = raw_arguments.copy()
-    arguments['limit'] = int(arguments['--limit'])
-    arguments['path'] = os.path.expanduser(arguments['--path'])
+    arguments['--limit'] = int(arguments['--limit'])
+    arguments['--path'] = os.path.expanduser(arguments['--path'])
+
+    return arguments
 
 
 def main():
